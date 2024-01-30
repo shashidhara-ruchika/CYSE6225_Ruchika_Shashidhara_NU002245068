@@ -17,13 +17,3 @@ export const db = new Sequelize(
     }
 );
 
-export const testDBConnection = async () => {
-    try {
-      await db.authenticate();
-      console.log('Connection to database is successful');
-      return true;
-    } catch (error) {
-      console.error('Unable to connect to the database:', error);
-      return false;
-    }
-};
