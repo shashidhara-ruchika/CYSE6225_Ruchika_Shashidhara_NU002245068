@@ -4,6 +4,13 @@ My web application for: [CYSE6225 Network Structures &amp; Cloud Computing](http
 ## [Assignment 1](https://spring2024.csye6225.cloud/assignments/01/)
 The objective of this assignment is to select a technology stack for a backend (API only) web application and to implement health check API.
 
+### Web Application
+
+* Programming Language: `TypeScript` 
+* Relational Database: `PostgreSQL`
+* Backend Frameworks: `Node.js` , `Express.js`
+* ORM Framework: `Sequelize`
+
 ## How to run the application
 
 1. Generate the npm packages
