@@ -7,7 +7,7 @@ export const testDBConnection = async () => {
       infoLogger.info('Connection to database is successful')
       return true;
     } catch (error) {
-      errorLogger.error('Unable to connect to the database:', error)
+      errorLogger.error('Unable to connect to the database, Error:', error)
       return false;
     }
 };
