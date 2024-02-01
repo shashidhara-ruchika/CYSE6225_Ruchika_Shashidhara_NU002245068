@@ -20,8 +20,16 @@ npm install
 ```
 
 2. Add `.env` file
+   
+```
+PORT=8080
+DATABASE_NAME='name'
+DATABASE_USER='user'
+DATABASE_PASSWORD='password'
+DATABASE_HOST='localhost'
+```
 
-3. Run the application
+1. Run the application
 
 ```
 npm run start
@@ -98,3 +106,12 @@ CREATE USER myuser WITH PASSWORD 'password';
 ```
 GRANT ALL PRIVILEGES ON DATABASE app_db TO myuser;
 ```
+
+## References
+
+1. [Creating a user, db & providing access in psql](https://medium.com/coding-blocks/creating-user-database-and-adding-access-on-postgresql-8bfcd2f4a91e) 
+2. [Sequelize](https://sequelize.org/docs/v6/getting-started/)
+3. [Log4js](https://www.npmjs.com/package/log4js)
+4. [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+5. [HEAD & OPTIONS](https://stackoverflow.com/questions/6660019/restful-api-methods-head-options#:~:text=OPTIONS%20tells%20you%20things%20such,status%20code%20would%20be%20returned.)
+6. [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)

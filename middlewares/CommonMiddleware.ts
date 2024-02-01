@@ -10,7 +10,7 @@ export const validateNoBody = async (req:any, res:any, next:any) => {
 }
 
 export const validateNoQueryParams = async (req:any, res:any, next:any) => {
-    if (req.query && (Object.keys(req.query).length > 0)) {
+    if ((req.query && (Object.keys(req.query).length > 0)) || req.url.includes('?')) {
         errorLogger.error('Bad Request: No query params should be present')
         res.status(400).end()
         return res
