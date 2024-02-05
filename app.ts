@@ -20,6 +20,3 @@ const PORT = process.env.port || 8080;
 app.listen(PORT, () => 
     infoLogger.info(`Server stared on port: ${PORT}`)
 )
-
-
-

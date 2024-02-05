@@ -8,7 +8,7 @@ export const postgresDBConnection = new Sequelize(
     process.env.DATABASE_NAME, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD,
     {
         host: process.env.DATABASE_HOST,
-        dialect: 'postgres',
+        dialect: 'postgres',        
         pool: {
             max: parseInt(process.env.DATABASE_POOL_MAX, 10) || 5,
             min: parseInt(process.env.DATABASE_POOL_MIN, 10) || 0,
@@ -39,4 +39,3 @@ export const syncPostgresDBConnection = async () => {
         return false
       }
 }
-

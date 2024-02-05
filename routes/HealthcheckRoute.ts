@@ -15,4 +15,3 @@ healthcheckRouter.put('/', setHealthcheckHeaders, handleMethodNotAllowed)
 healthcheckRouter.delete('/', setHealthcheckHeaders, handleMethodNotAllowed)
 healthcheckRouter.patch('/', setHealthcheckHeaders, handleMethodNotAllowed)
 healthcheckRouter.options('/', setHealthcheckHeaders, handleMethodNotAllowed)
-
