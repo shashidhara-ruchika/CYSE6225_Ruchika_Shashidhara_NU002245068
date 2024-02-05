@@ -1,12 +1,18 @@
 import express from 'express';
-import { testDBConnection } from './services/HealthcheckService';
+import { syncPostgresDBConnection, testPostgresDBConnection } from './databases/PostgresDBConnection';
 import { healthcheckRouter } from './routes/HealthcheckRoute';
-import { infoLogger } from './services/Logger'
+import { errorLogger, infoLogger } from './services/LoggerService'
 
 const app = express()
 app.use(express.json())
 
-testDBConnection()
+testPostgresDBConnection()
+    .then(() => {
+        syncPostgresDBConnection()
+    })
+    .catch((error) => {
+        errorLogger.error('Error occured: ', error)
+    })
 
 app.use('/healthz', healthcheckRouter)
 

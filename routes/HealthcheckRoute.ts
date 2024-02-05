@@ -1,8 +1,8 @@
 import express from 'express';
-import { performPostgresDBHealthcheck } from '../services/HealthcheckService';
+import { performPostgresDBHealthcheck } from '../controllers/HealthcheckController';
 import { setHealthcheckHeaders } from '../middlewares/HealthcheckMiddleware'
 import { validateNoBody, validateNoQueryParams } from '../middlewares/CommonMiddleware'
-import { handleMethodNotAllowed } from '../services/CommonMethod';
+import { handleMethodNotAllowed } from '../controllers/CommonMethod';
 
 export const healthcheckRouter = express.Router();
 

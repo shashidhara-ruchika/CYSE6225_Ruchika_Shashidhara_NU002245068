@@ -1,4 +1,4 @@
-import { errorLogger } from "../services/Logger"
+import { errorLogger } from "../services/LoggerService"
 
 export const validateNoBody = async (req:any, res:any, next:any) => {
     if ((req.body && Object.keys(req.body).length > 0) || req.get('Content-Type')) {
